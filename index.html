@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de QR Code</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #e9ecef; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; }
+        .container { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); text-align: center; width: 90%; max-width: 400px; }
+        h2 { color: #333; margin-bottom: 20px; }
+        input { width: 100%; padding: 12px; margin-bottom: 20px; border: 2px solid #ddd; border-radius: 8px; box-sizing: border-box; font-size: 16px; }
+        input:focus { border-color: #28a745; outline: none; }
+        button { background-color: #28a745; color: white; border: none; padding: 15px; width: 100%; border-radius: 8px; font-size: 16px; font-weight: bold; cursor: pointer; transition: 0.3s; }
+        button:hover { background-color: #218838; }
+        #qrcode { margin-top: 25px; display: flex; justify-content: center; background: #fff; padding: 10px; border-radius: 10px; }
+        .download-btn { display: none; margin-top: 20px; background-color: #007bff; text-decoration: none; color: white; padding: 10px; border-radius: 8px; font-size: 14px; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Gerador QR Code 📸</h2>
+    <input type="text" id="linkInput" placeholder="Cole o link aqui!">
+    <button onclick="gerarQR()">Gerar QR Code</button>
+    
+    <div id="qrcode"></div>
+    
+    <a id="downloadLink" class="download-btn" download="arquivo.png">Baixar Imagem</a>
+</div>
+
+<script>
+    let qrcode = null;
+
+    function gerarQR() {
+        const link = document.getElementById('linkInput').value;
+        const qrcodeContainer = document.getElementById('qrcode');
+        const downloadBtn = document.getElementById('downloadLink');
+
+        if (link.trim() === "") {
+            alert("Por favor, cole um link primeiro!");
+            return;
+        }
+
+        // Limpa o QR Code anterior se existir
+        qrcodeContainer.innerHTML = "";
+
+        // Gera o novo QR Code
+        qrcode = new QRCode(qrcodeContainer, {
+            text: link,
+            width: 256,
+            height: 256,
+            colorDark : "#000000",
+            colorLight : "#ffffff",
+            correctLevel : QRCode.CorrectLevel.H
+        });
+
+        // Pequeno delay para a biblioteca criar a imagem antes de liberar o download
+        setTimeout(() => {
+            const img = qrcodeContainer.querySelector('img');
+            if (img) {
+                downloadBtn.href = img.src;
+                downloadBtn.style.display = "inline-block";
+            }
+        }, 300);
+    }
+</script>
+
+</body>
+</html>
