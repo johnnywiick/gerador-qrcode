@@ -1,32 +1,22 @@
-📸 QR Code Studio
-📝 Sobre o Projeto
-O QR Code Studio é uma aplicação web moderna e intuitiva projetada para a geração instantânea de códigos QR personalizados. Desenvolvido com foco na simplicidade e eficiência, o sistema permite transformar URLs ou textos em imagens escaneáveis com alta qualidade, oferecendo total controle sobre a estética do código gerado.
+# 📸 QR Code Studio
 
-✨ Funcionalidades Principais
-Geração em Tempo Real: O código é atualizado instantaneamente enquanto digitas, permitindo uma visualização imediata do resultado.
+## 📝 Sobre o Projeto
+O **QR Code Studio** é uma ferramenta web moderna, leve e intuitiva desenvolvida para a criação instantânea de códigos QR. O objetivo principal é oferecer uma solução rápida para transformar links ou textos em imagens escaneáveis, com foco total na privacidade e na experiência do usuário.
 
-Personalização de Cores: Ajuste total das cores do código e do fundo através de seletores integrados para garantir o melhor contraste ou identidade visual.
+## ✨ Funcionalidades
+- **Geração em Tempo Real:** O código é gerado automaticamente enquanto o usuário digita.
+- **Personalização de Cores:** Permite escolher a cor do QR Code e do fundo para melhor contraste ou identidade visual.
+- **Download Direto:** Exportação da imagem em formato PNG com alta resolução.
+- **Interface Responsiva:** Design otimizado para uso em smartphones, tablets e desktops.
 
-Interface Premium: Design limpo com efeitos de glassmorphism, gradientes modernos e total responsividade para dispositivos móveis.
+## 🛠️ Tecnologias Utilizadas
+- **Frontend:** HTML5, CSS3 (Modern Flexbox e Gradients).
+- **Lógica:** JavaScript Vanilla (ES6+).
+- **Biblioteca:** [QRCode.js](https://github.com/davidshimjs/qrcodejs).
+- **Hospedagem:** GitHub Pages.
 
-Download Facilitado: Botão dedicado para exportar o QR Code gerado diretamente para o formato PNG.
-
-🛠️ Tecnologias Utilizadas
-Estrutura: HTML5.
-
-Estilização: CSS3 (utilizando Variáveis, Flexbox e Backdrop-filter).
-
-Lógica: JavaScript Vanilla (ES6+) para manipulação dinâmica do DOM.
-
-Biblioteca: QRCode.js para a renderização técnica.
-
-Hospedagem: GitHub Pages.
-
-🚀 Como Utilizar
-Acede à aplicação através do link do GitHub Pages.
-
-Insere o link ou o texto no campo "Link de Destino".
-
-(Opcional) Escolhe as cores desejadas nos campos "Cor do Código" e "Cor do Fundo".
-
-Clica em "Baixar Imagem PNG" para guardar o teu código pronto a usar.
+## 🚀 Como Utilizar
+1. Acesse o link da aplicação.
+2. Insira a URL ou o texto desejado no campo indicado.
+3. Personalize as cores, se desejar.
+4. Clique em "Baixar Imagem" para salvar o seu QR Code pronto para uso.
