@@ -11,7 +11,7 @@
 
 ## 🚀 O que é o QR Code Studio?
 
-O **QR Code Studio 482** é uma ferramenta web leve e profissional para **geração de QR Codes personalizados**, desenvolvida para uso interno de qualquer pessoa que precise criar códigos de forma rápida e com identidade visual própria.
+O **QR Code Studio** é uma ferramenta web leve e profissional para **geração de QR Codes personalizados**, desenvolvida para uso interno de qualquer pessoa que precise criar códigos de forma rápida e com identidade visual própria.
 
 O usuário informa o link de destino, escolhe as cores do código e do fundo — e em segundos tem um QR Code pronto para baixar em alta qualidade no formato PNG.
 
